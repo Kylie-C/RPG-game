@@ -4,4 +4,4 @@ let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
-let inventory = ["stick", "dagger", "sword"]; //The player's inventory in my game will be able to hold multiple items. I changed the string to an array because it can hold multiple values. 
+let inventory = ["stick"]; //For now, I want the player to start with just the stick, so I changed the inventory array to have stick as its only value.
