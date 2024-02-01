@@ -18,10 +18,10 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 function goStore(){
     console.log("Going to store.");
 }
-// Right now, I declared this function (basically I just named it), but I need to call it in order for it to do something.
-// So looking at it in the console as is, nothing will happen because the function hasn't been called.
-goStore()
-// This is how you would call that function. Now if I look in the console, I'll see "Going to store." show up.
+function goCave (){
+    console.log("Going to cave.")
+  }
+//   Declared a goCave function, but it's not being called yet, so it's also not doing anything.
 
 
 
