@@ -14,3 +14,6 @@ const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
+const monsterHealthText = document.querySelector("#monsterHealth");
+// Used the querySelector() to get the #monsterHealth element. Since I already declared a monsterHealth variable earlier, I needed to 
+// use a different variable name for this element, so I declared it monsterHealthText.
