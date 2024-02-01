@@ -20,8 +20,11 @@ function goStore(){
 }
 function goCave (){
     console.log("Going to cave.")
+}
+function fightDragon (){
+    console.log("Fighting dragon.")
   }
-//   Declared a goCave function, but it's not being called yet, so it's also not doing anything.
+// Made fightDragon function that isn't being called yet, so it's doing nothing.
 
 
 
