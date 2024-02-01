@@ -24,8 +24,6 @@ function goCave (){
 function fightDragon (){
     console.log("Fighting dragon.")
   }
-// Made fightDragon function that isn't being called yet, so it's doing nothing.
-
-
-
-
+button1.onclick=goStore
+// This is how you use dot notation to set the onclick property of my button1 to the function reference of goStore(). 
+// Since button1 was already declared, I didn't need to declare it using let or const.
