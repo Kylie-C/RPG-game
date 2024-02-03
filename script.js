@@ -20,15 +20,17 @@ button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 function goStore() {
+    text.innerText = "You enter the store.";
     button1.innerText = "Buy 10 health (10 gold)";
-    button1.onclick = buyHealth;
     button2.innerText = "Buy weapon (30 gold)";
-    button2.onclick = buyWeapon;
     button3.innerText = "Go to town square";
+    button1.onclick = buyHealth;
+    button2.onclick = buyWeapon;
     button3.onclick = goTown;
   }
-// Updated the onclick property for each button to run the following functions: buyHealh, buyWeapon, goTown. 
-// Howevere, these new functions haven't been defined yet.
+// I rearranged the code within the goStore function because all the buttons weren't updating the way I had it previously arranged 
+// due to code running top down. I also added innerText to the text element in the HTML to now show "You enter the store."
+// I placed the text.innerText at the top so it'll be the first bit of code to run when the onclick event occurrs.
 function goCave (){
     console.log("Going to cave.")
 }
