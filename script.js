@@ -15,15 +15,18 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-function goStore(){
-    console.log("Going to store.");
+button1.onclick=goStore
+button2.onclick = goCave;
+button3.onclick = fightDragon;
+// Moved these 3 onclick properties up here to clean up the code.
+function goStore() {
+    button1.innerText = "Buy 10 health (10 gold)";
 }
+// I removed the code inside the goStore function and added a line that updates the text of button1 to say Buy 10 health(10 gold).
+// I did this using the innerText property, which controls the text that appears in an HTML element (button1). 
 function goCave (){
     console.log("Going to cave.")
 }
 function fightDragon (){
     console.log("Fighting dragon.")
   }
-button1.onclick=goStore
-// This is how you use dot notation to set the onclick property of my button1 to the function reference of goStore(). 
-// Since button1 was already declared, I didn't need to declare it using let or const.
