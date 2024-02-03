@@ -28,12 +28,13 @@ function goStore() {
     button2.onclick = buyWeapon;
     button3.onclick = goTown;
   }
-// I rearranged the code within the goStore function because all the buttons weren't updating the way I had it previously arranged 
-// due to code running top down. I also added innerText to the text element in the HTML to now show "You enter the store."
-// I placed the text.innerText at the top so it'll be the first bit of code to run when the onclick event occurrs.
 function goCave (){
     console.log("Going to cave.")
 }
 function fightDragon (){
     console.log("Fighting dragon.")
   }
+function buyHealth (){}
+function buyWeapon () {}
+function goTown () {}
+// Added 3 empty functions.
