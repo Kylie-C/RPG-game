@@ -21,12 +21,14 @@ button3.onclick = fightDragon;
 
 function goStore() {
     button1.innerText = "Buy 10 health (10 gold)";
+    button1.onclick = buyHealth;
     button2.innerText = "Buy weapon (30 gold)";
+    button2.onclick = buyWeapon;
     button3.innerText = "Go to town square";
+    button3.onclick = goTown;
   }
-// I used the innerText property to update button2 and button3. I realized that these functions are all occurring on the same page; a
-// new page isn't loading. It just acts like a new page has loaded when the goStore function is activated. Those 3 buttons are
-// the same buttons, just the words on them changed when the onclick event happened.
+// Updated the onclick property for each button to run the following functions: buyHealh, buyWeapon, goTown. 
+// Howevere, these new functions haven't been defined yet.
 function goCave (){
     console.log("Going to cave.")
 }
