@@ -15,15 +15,18 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-button1.onclick=goStore
+button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
-// Moved these 3 onclick properties up here to clean up the code.
+
 function goStore() {
     button1.innerText = "Buy 10 health (10 gold)";
-}
-// I removed the code inside the goStore function and added a line that updates the text of button1 to say Buy 10 health(10 gold).
-// I did this using the innerText property, which controls the text that appears in an HTML element (button1). 
+    button2.innerText = "Buy weapon (30 gold)";
+    button3.innerText = "Go to town square";
+  }
+// I used the innerText property to update button2 and button3. I realized that these functions are all occurring on the same page; a
+// new page isn't loading. It just acts like a new page has loaded when the goStore function is activated. Those 3 buttons are
+// the same buttons, just the words on them changed when the onclick event happened.
 function goCave (){
     console.log("Going to cave.")
 }
