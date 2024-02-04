@@ -26,10 +26,11 @@ function goTown() {
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says Store.";
+    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+    // I needed to wrap the text Store in double quotes, but I had already used double quotes to create the string, so
+    // I escaped the quotes by putting a \ before each of the quotes I wanted to show in the browser.
   }
-//   Updated the goTown() so the buttons' text and onclick properties reflect what should be shown. Also updated the 
-// text.innerText to read the goTown() message.
+
 function goStore() {
     button1.innerText = "Buy 10 health (10 gold)";
     button2.innerText = "Buy weapon (30 gold)";
