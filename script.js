@@ -19,6 +19,10 @@ button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+
+function update (location) {}
+// Relocated it so this function runs first, I think
+
 function goTown() {
     button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
@@ -39,14 +43,6 @@ function goStore() {
     text.innerText = "You enter the store.";
 }
 
-function update (location) {}
-// I have repetition in the goTown() and goStore(). When I have repetition in my code, it's a sign that I need another function.
-// Functions take parameters, which are values that are given to the function each time it is run. Here is a function that takes a 
-// parameter called "param."
-// function myFunction(param){
-//      console.log(param);
-// }
-// So, I created an empty function that takes a parameter called location.
 function goCave (){
     console.log("Going to cave.")
 }
