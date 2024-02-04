@@ -27,8 +27,6 @@ function goTown() {
     button2.onclick = goCave;
     button3.onclick = fightDragon;
     text.innerText = "You are in the town square. You see a sign that says \"Store\".";
-    // I needed to wrap the text Store in double quotes, but I had already used double quotes to create the string, so
-    // I escaped the quotes by putting a \ before each of the quotes I wanted to show in the browser.
   }
 
 function goStore() {
@@ -39,7 +37,16 @@ function goStore() {
     button2.onclick = buyWeapon;
     button3.onclick = goTown;
     text.innerText = "You enter the store.";
-  }
+}
+
+function update (location) {}
+// I have repetition in the goTown() and goStore(). When I have repetition in my code, it's a sign that I need another function.
+// Functions take parameters, which are values that are given to the function each time it is run. Here is a function that takes a 
+// parameter called "param."
+// function myFunction(param){
+//      console.log(param);
+// }
+// So, I created an empty function that takes a parameter called location.
 function goCave (){
     console.log("Going to cave.")
 }
