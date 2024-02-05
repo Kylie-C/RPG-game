@@ -15,13 +15,13 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+const locations = [];
+// I created a variable called "locations" and set it to an empty array [].
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-
 function update (location) {}
-// Relocated it so this function runs first, I think
 
 function goTown() {
     button1.innerText = "Go to store";
