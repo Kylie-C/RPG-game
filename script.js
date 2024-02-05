@@ -18,10 +18,13 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [
     {
         name: "town square",
-        "button text": ["Go to store", "Go to cave", "Fight dragon"]
+        "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        "button functions": [goStore, goCave, fightDragon],
+        text: "You are in the town square. You see a sign that says \"Store\"."
     }
   ];
-// Apparently all I needed were the strings, not the properties.
+// Added another comma to seperate this last property. The property is named "text" and was given the same string value as the one
+// assigned to text.innerText in the goTown function.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
