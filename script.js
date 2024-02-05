@@ -18,15 +18,10 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [
     {
         name: "town square",
-        "button text": [
-            button1.innerText = "Go to store",
-            button2.innerText = "Go to cave",
-            button3.innerText = "Fight dragon"
-        ]
+        "button text": ["Go to store", "Go to cave", "Fight dragon"]
     }
   ];
-// I gave the empty button text array three string elements and used the three strings being assigned to the button innerText
-// properties in the goTown(). I made sure to add commas to seperate the string elements.
+// Apparently all I needed were the strings, not the properties.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
