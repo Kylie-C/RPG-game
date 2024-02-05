@@ -16,11 +16,17 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [
-    { name: "town square"
+    {
+        name: "town square",
+        "button text": [
+            button1.innerText = "Go to store",
+            button2.innerText = "Go to cave",
+            button3.innerText = "Fight dragon"
+        ]
     }
   ];
-// Object properties are written as KEY: VALUE pairs, where KEY is the name of the property (or the key), and VALUE is the value 
-// that property holds. So in this, I added the KEY property "name" to my empty object and gave it a VALUE of "town square"
+// I gave the empty button text array three string elements and used the three strings being assigned to the button innerText
+// properties in the goTown(). I made sure to add commas to seperate the string elements.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
