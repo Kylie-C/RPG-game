@@ -15,10 +15,12 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const locations = [{}];
-// Arrays can store any data type. This time, this array will be storing objects. Objects are similar to arrays, but with a few 
-// differences. One difference is that objects use properties, or keys, to access and modify data. Objects are indicated by {}.
-// So, I added an empty object to my locations array.
+const locations = [
+    { name: "town square"
+    }
+  ];
+// Object properties are written as KEY: VALUE pairs, where KEY is the name of the property (or the key), and VALUE is the value 
+// that property holds. So in this, I added the KEY property "name" to my empty object and gave it a VALUE of "town square"
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
