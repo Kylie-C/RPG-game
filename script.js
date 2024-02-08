@@ -45,11 +45,13 @@ function update(location) {
   }
 
 function goTown() {
+    update();
   }
-
+// Instead of assigning the innerText and onclick properties to specofoc strings and functions, the update() will use data from
+// the location that is passed into it. First, that data needs to be passed, so I'm calling the update() from inside the goTown()
 function goStore() {
 }
-// Moved the code FROM the function goTown() into the function update(locations), then removed the code from the goTown() and goStore()
+
 function goCave (){
     console.log("Going to cave.")
 }
