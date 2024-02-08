@@ -45,10 +45,11 @@ function update(location) {
   }
 
 function goTown() {
-    update(locations);
+    update(locations[0]);
   }
-// I needed to pass the location argument into the update call. I pass arguments by including them within the parentheses of the
-// function call. So here, I passed the locations array into the update call.
+// The locations array contains two locations: the "town square" and the "store". I WAS passing that entire array into the 
+// update(). Now, I am only passing the first element of the locations array. By adding the [0] at the end of the variable, I'm
+// accessing the first element in that argument (locations) array.
 function goStore() {
 }
 
