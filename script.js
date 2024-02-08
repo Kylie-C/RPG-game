@@ -45,10 +45,10 @@ function update(location) {
   }
 
 function goTown() {
-    update();
+    update(locations);
   }
-// Instead of assigning the innerText and onclick properties to specofoc strings and functions, the update() will use data from
-// the location that is passed into it. First, that data needs to be passed, so I'm calling the update() from inside the goTown()
+// I needed to pass the location argument into the update call. I pass arguments by including them within the parentheses of the
+// function call. So here, I passed the locations array into the update call.
 function goStore() {
 }
 
