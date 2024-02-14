@@ -51,7 +51,7 @@ function goTown() {
 function goStore() {
     update(locations[1]);
 }
-// Updated the goStore function to call the update function and passed the second element of the locations array as my argument.
+
 function goCave (){
     console.log("Going to cave.")
 }
@@ -60,3 +60,6 @@ function fightDragon (){
   }
 function buyHealth (){}
 function buyWeapon () {}
+function fightSlime () {}
+function fightBeast () {}
+// Created two more empty functions, which will be used in my upcoming cave object.
