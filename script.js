@@ -43,15 +43,15 @@ function update(location) {
     button3.onclick = location["button functions"][2];
     text.innerText = location.text;
   }
-// I updated the text.innerText assignment to equal the text from the location object. However, I used dot notation instead
-// of bracket notation. So it's objectName.propertyName
+
 function goTown() {
     update(locations[0]);
   }
 
 function goStore() {
+    update(locations[1]);
 }
-
+// Updated the goStore function to call the update function and passed the second element of the locations array as my argument.
 function goCave (){
     console.log("Going to cave.")
 }
