@@ -29,13 +29,13 @@ const locations = [
         text: "You enter the store."
     }
   ];
-
+// This is the array (above) you can see those 3 elements. 
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 function update(location) {
-    button1.innerText = "Go to store";
+    button1.innerText = location["button text"][0];
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
     button1.onclick = goStore;
@@ -43,13 +43,12 @@ function update(location) {
     button3.onclick = fightDragon;
     text.innerText = "You are in the town square. You see a sign that says \"Store\".";
   }
-
+// location["button text"] is an array with 3 elements (see the above comment). I changed the button1.innerText assignment to
+// be location["button text"][0] which represents the first element of the array.
 function goTown() {
     update(locations[0]);
   }
-// The locations array contains two locations: the "town square" and the "store". I WAS passing that entire array into the 
-// update(). Now, I am only passing the first element of the locations array. By adding the [0] at the end of the variable, I'm
-// accessing the first element in that argument (locations) array.
+
 function goStore() {
 }
 
