@@ -27,9 +27,15 @@ const locations = [
         "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
         text: "You enter the store."
-    }
+    },
+    {
+        name: "cave",
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+        "button functions": [fightSlime, fightBeast, goTown],
+        text: "You enter the cave. You see some monsters."
+    },
   ];
-
+// Added a third object to the locations array and gave it the same properties as the other two objects, with modification to the strings.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -62,4 +68,3 @@ function buyHealth (){}
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
-// Created two more empty functions, which will be used in my upcoming cave object.
