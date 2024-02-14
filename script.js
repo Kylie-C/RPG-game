@@ -35,7 +35,7 @@ const locations = [
         text: "You enter the cave. You see some monsters."
     },
   ];
-// Added a third object to the locations array and gave it the same properties as the other two objects, with modification to the strings.
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -58,9 +58,12 @@ function goStore() {
     update(locations[1]);
 }
 
-function goCave (){
-    console.log("Going to cave.")
-}
+function goCave() {
+    update(locations[2]);
+  }
+// Updated the goCave() because I now have a "cave" location object. The goCave() now calls the update and passed the new "cave"
+// location. I also removed the console.log call because console.log is only for debugging. It should never be pushed through in the
+// final code.
 function fightDragon (){
     console.log("Fighting dragon.")
   }
