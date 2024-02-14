@@ -41,9 +41,10 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+    text.innerText = location.text;
   }
-// I updated onclick assignment within the array to be assigned their respective values of the "button functions" array.
+// I updated the text.innerText assignment to equal the text from the location object. However, I used dot notation instead
+// of bracket notation. So it's objectName.propertyName
 function goTown() {
     update(locations[0]);
   }
