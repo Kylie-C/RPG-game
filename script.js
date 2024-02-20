@@ -66,11 +66,11 @@ function fightDragon (){
     console.log("Fighting dragon.")
   }
 function buyHealth (){
-  gold = gold - 10;
-  health = health + 10;
+  gold -= 10;
+  health += 10;
 }
-// Also made it so that when a player spends 10 gold, they buy 10 health. To achieve this, I first needed the gold to update, which is
-// why it's listed first, then I added a line to set health = health + 10.
+// I just used a shorthand way to add or subtract from a variable called compound assignment to update both lines in the function.
+// So gold = gold - 10; is the same as gold -= 10;     and      health = health + 10; is the same as health += 10;
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
