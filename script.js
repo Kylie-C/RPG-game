@@ -67,9 +67,10 @@ function fightDragon (){
   }
 function buyHealth (){
   gold = gold - 10;
+  health = health + 10;
 }
-// Now that my "store" and "cave" locations are complete, I'm starting to code the actions the player takes at those locations. 
-// Inside the buyHealth(), I set the gold (variable name) equal to gold - 10.
+// Also made it so that when a player spends 10 gold, they buy 10 health. To achieve this, I first needed the gold to update, which is
+// why it's listed first, then I added a line to set health = health + 10.
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
