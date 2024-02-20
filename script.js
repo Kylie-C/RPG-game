@@ -61,13 +61,15 @@ function goStore() {
 function goCave() {
     update(locations[2]);
   }
-// Updated the goCave() because I now have a "cave" location object. The goCave() now calls the update and passed the new "cave"
-// location. I also removed the console.log call because console.log is only for debugging. It should never be pushed through in the
-// final code.
+
 function fightDragon (){
     console.log("Fighting dragon.")
   }
-function buyHealth (){}
+function buyHealth (){
+  gold = gold - 10;
+}
+// Now that my "store" and "cave" locations are complete, I'm starting to code the actions the player takes at those locations. 
+// Inside the buyHealth(), I set the gold (variable name) equal to gold - 10.
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
