@@ -1,7 +1,6 @@
 let xp = 0;
 let health = 100; 
 let gold = 50;
-// HERE IS WHERE I ASSIGNED THE HEALTH AND GOLD VARIABLES (referencing what I noted below)
 let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
@@ -13,7 +12,6 @@ const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
-// HERE'S WHERE I PRIOR REFERENCED WHAT'S ON THE HTML (referencing what I noted below)
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
@@ -68,19 +66,17 @@ function fightDragon (){
     console.log("Fighting dragon.")
   }
 function buyHealth (){
+  if (gold >= 10) {
   gold -= 10;
   health += 10;
   goldText.innerText = gold;
   healthText.innerText = health;
-}
+  } else {
 
-// Now that Iam updateing the gold and health variables, I needed to display those new values on the game screen.
-// After my assignment lines (gold -= 10;  and  health += 10;), I assigned the innerText property of goldText to be the variable gold.
-// Then used the same pattern to update the healthText with the health variable.
-// Now when you click on Buy 10 health (10 gold), the inner text in white will update. There's currently no limit on it, so it will 
-// go on indefinately. 
-// To be clear, the reason this worked was because I had previously assigned the gold and health variabled at the top of this code
-// as well as the reference to what's written in the html.
+  }
+}
+// When a player tries to buy health, it will only work if they have enough money. If they do not, nothing will happen. I added
+// an empty else {} statement so I can put code to run if a player does not have enough money.
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
