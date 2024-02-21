@@ -72,11 +72,11 @@ function buyHealth (){
   goldText.innerText = gold;
   healthText.innerText = health;
   } else {
-
+    text.innerText = "You do not have enough gold to buy health.";
   }
 }
-// When a player tries to buy health, it will only work if they have enough money. If they do not, nothing will happen. I added
-// an empty else {} statement so I can put code to run if a player does not have enough money.
+// When a player doesn't have enough gold to buy health, this else statement will run. It will show where the 
+// "Welcome to Dragon Repeller" text shows, because this is tweaking the text ID from the html.
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
