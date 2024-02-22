@@ -2,7 +2,6 @@ let xp = 0;
 let health = 100; 
 let gold = 50;
 let currentWeapon = 0;
-// This is the currentWeapon variable! The 0 corresponds to the first object in the weapons [] array down below.
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
@@ -21,8 +20,6 @@ const weapons = [
     name: "stick",
     power: 5
   },
-// The value of the currentWeapon variable (above) corresponds to an index in the weapons array [] located here. The player
-// starts with a "stick" since currentWeapon starts at 0 and weapons[0] is the "stick" weapon.
     {
     name: "dagger",
     power: 30
@@ -102,10 +99,9 @@ function buyHealth (){
 function buyWeapon () {
   if (gold >= 30) {
     gold -= 30;
-    currentWeapon += 1;
+    currentWeapon++;
   }
 }
-// In the buyWeapon function, I used the compound assignment += to add 1 to currentWeapon. This makes it so the user is buying 
-// the next weapon in the weapons array. The user starts with weapons[0], which is the stick.
+// The ++ means "incrementing", so it means it will increase by 1. So += 1 is the same as ++.
 function fightSlime () {}
 function fightBeast () {}
