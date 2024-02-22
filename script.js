@@ -15,8 +15,27 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const weapons = [];
-// I used const to create a weapons variable above my locations array and assigned it an empty array [].
+const weapons = [
+  {
+    name: "stick",
+    power: 5
+  },
+    {
+    name: "dagger",
+    power: 30
+  },
+    {
+    name: "claw hammer",
+    power: 50
+  },
+    {
+    name: "sword",
+    power: 100
+  },
+];
+// Just like my locations array, my weapons array is hold ing objects. I added 4 objects to the weapons array, each with two
+// properties: name and power. The name properties were turned into strings. I also remembered to seperate each object and each
+// property with a comma.
 const locations = [
     {
         name: "town square",
