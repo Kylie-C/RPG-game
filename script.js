@@ -15,6 +15,8 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+const weapons = [];
+// I used const to create a weapons variable above my locations array and assigned it an empty array [].
 const locations = [
     {
         name: "town square",
@@ -65,6 +67,7 @@ function goCave() {
 function fightDragon (){
     console.log("Fighting dragon.")
   }
+
 function buyHealth (){
   if (gold >= 10) {
   gold -= 10;
@@ -75,8 +78,7 @@ function buyHealth (){
     text.innerText = "You do not have enough gold to buy health.";
   }
 }
-// When a player doesn't have enough gold to buy health, this else statement will run. It will show where the 
-// "Welcome to Dragon Repeller" text shows, because this is tweaking the text ID from the html.
+
 function buyWeapon () {}
 function fightSlime () {}
 function fightBeast () {}
