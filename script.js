@@ -100,8 +100,14 @@ function buyWeapon () {
   if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
+    goldText.innerText = gold;
+    text.innerText = "You now have a new weapon.";
   }
 }
-// The ++ means "incrementing", so it means it will increase by 1. So += 1 is the same as ++.
+// I updated the goldText element to display the new value of gold (however much gold the user has before/after buying a weapon),
+// and updated the text element (the black area) to display a new message.
+// I needed to use the innterText property because the elements refer to the entire element and I just wanted to tweak what the
+// user's text. The gold element is refering to the modifications made to the gold within that same function and the text element
+// is refering to the html because of the document.querySelector().
 function fightSlime () {}
 function fightBeast () {}
