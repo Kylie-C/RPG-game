@@ -33,9 +33,7 @@ const weapons = [
     power: 100
   },
 ];
-// Just like my locations array, my weapons array is hold ing objects. I added 4 objects to the weapons array, each with two
-// properties: name and power. The name properties were turned into strings. I also remembered to seperate each object and each
-// property with a comma.
+
 const locations = [
     {
         name: "town square",
@@ -98,6 +96,11 @@ function buyHealth (){
   }
 }
 
-function buyWeapon () {}
+function buyWeapon () {
+  if (gold >= 30) {
+    
+  }
+}
+// added an if statement to my buyWeapon function with the conditional to check if gold it greater than or equal to 30.
 function fightSlime () {}
 function fightBeast () {}
