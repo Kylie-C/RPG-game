@@ -102,10 +102,12 @@ function buyWeapon () {
     currentWeapon++;
     goldText.innerText = gold;
     let newWeapon = weapons[currentWeapon].name;
-    text.innerText = "You now have a new weapon.";
+    text.innerText = "You now have a " + newWeapon + ".";
   }
 }
-// weapons[currentWeapon] is an object. I used dot notation to get the name property of that object.
+// To make the text.innerText update with the name of the new weapon the player purchased, I used the concatenation operator and called
+// the newWeapon variable. Notice the space after the "a" needed to be included so there would actually be a space and the 
+// period needed to also be concatenated at the end.
 
 function fightSlime () {}
 function fightBeast () {}
