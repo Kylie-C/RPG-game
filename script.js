@@ -98,9 +98,10 @@ function buyHealth (){
 
 function buyWeapon () {
   if (gold >= 30) {
-    
+    gold -= 30;
   }
 }
-// added an if statement to my buyWeapon function with the conditional to check if gold it greater than or equal to 30.
+// Similar to my buyHealth function, I set gold less than or equal to -= 30 inside my if statement so when this function is finished,
+// it will subtract 30 from the current gold IF the user had enough gold.
 function fightSlime () {}
 function fightBeast () {}
