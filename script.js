@@ -101,12 +101,11 @@ function buyWeapon () {
     gold -= 30;
     currentWeapon++;
     goldText.innerText = gold;
-    let newWeapon = weapons[currentWeapon];
+    let newWeapon = weapons[currentWeapon].name;
     text.innerText = "You now have a new weapon.";
   }
 }
-// I used bracket notation to access an object within the weapons array and assigned it to my newWeapon variable by placing the 
-// variable currentWeapon within the brackets. When I use a variable in bracket notation, I'm accessing the property or index
-// by the VALUE of that variable. Note how in this same function, the currentWeapon variable is being increased by 1.
+// weapons[currentWeapon] is an object. I used dot notation to get the name property of that object.
+
 function fightSlime () {}
 function fightBeast () {}
