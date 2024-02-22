@@ -101,13 +101,12 @@ function buyWeapon () {
     gold -= 30;
     currentWeapon++;
     goldText.innerText = gold;
-    let newWeapon = weapons;
+    let newWeapon = weapons[currentWeapon];
     text.innerText = "You now have a new weapon.";
   }
 }
-// I want to tell the player what weapon they bought, so I started this process by using let to initialize the new variable newWeapon 
-// and set it to equal the weapons [] array up top so the system calls that data. It had me purposely place this new line of code  
-// between the two lines I had previouslywritten, I'm guessing for top down readability purposes later on, as I'm not currently sure  
-// why that specific location was necessary.
+// I used bracket notation to access an object within the weapons array and assigned it to my newWeapon variable by placing the 
+// variable currentWeapon within the brackets. When I use a variable in bracket notation, I'm accessing the property or index
+// by the VALUE of that variable. Note how in this same function, the currentWeapon variable is being increased by 1.
 function fightSlime () {}
 function fightBeast () {}
