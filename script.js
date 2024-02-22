@@ -101,13 +101,13 @@ function buyWeapon () {
     gold -= 30;
     currentWeapon++;
     goldText.innerText = gold;
+    let newWeapon = weapons;
     text.innerText = "You now have a new weapon.";
   }
 }
-// I updated the goldText element to display the new value of gold (however much gold the user has before/after buying a weapon),
-// and updated the text element (the black area) to display a new message.
-// I needed to use the innterText property because the elements refer to the entire element and I just wanted to tweak what the
-// user's text. The gold element is refering to the modifications made to the gold within that same function and the text element
-// is refering to the html because of the document.querySelector().
+// I want to tell the player what weapon they bought, so I started this process by using let to initialize the new variable newWeapon 
+// and set it to equal the weapons [] array up top so the system calls that data. It had me purposely place this new line of code  
+// between the two lines I had previouslywritten, I'm guessing for top down readability purposes later on, as I'm not currently sure  
+// why that specific location was necessary.
 function fightSlime () {}
 function fightBeast () {}
