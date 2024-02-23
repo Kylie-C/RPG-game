@@ -5,6 +5,7 @@ let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
+// Inventory is an array because of the square brackets []. 
 const button1 = document.querySelector("#button1"); 
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3"); 
@@ -103,11 +104,12 @@ function buyWeapon () {
     goldText.innerText = gold;
     let newWeapon = weapons[currentWeapon].name;
     text.innerText = "You now have a " + newWeapon + ".";
+    inventory.push(newWeapon);
   }
 }
-// To make the text.innerText update with the name of the new weapon the player purchased, I used the concatenation operator and called
-// the newWeapon variable. Notice the space after the "a" needed to be included so there would actually be a space and the 
-// period needed to also be concatenated at the end.
+// Back at the beginning of this project, I created the inventory [] array (located at the top). I added the newWeapon variable to 
+// the END of the inventory array using the push() method. So even though I can't see it, the inventory [] now looks like this:
+// let inventory = ["stick", newWeapon];
 
 function fightSlime () {}
 function fightBeast () {}
