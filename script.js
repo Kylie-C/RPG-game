@@ -5,7 +5,6 @@ let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
-// 
 const button1 = document.querySelector("#button1"); 
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3"); 
@@ -105,12 +104,13 @@ function buyWeapon () {
     let newWeapon = weapons[currentWeapon].name;
     text.innerText = "You now have a " + newWeapon + ".";
     inventory.push(newWeapon);
-    text.innerText += " In your inventory you have: ";
+    text.innerText += " In your inventory you have: " + inventory;
   }
 }
-// Up until now, any time text.innerText was updated, the old text was erased. This time, I used the += operator to add text to the 
-// end of text.innerText. Notice the spaces at the beginning and end, which need to be manually input. The innerText will now read:
-// "You now have a DAGGER. In your inventory you have: "
+// I used the concatenation operator at the end of the string to add the contents of the inventory array to the string. It currently
+// reads as "You now have a dagger. In your inventory you have: stick,dagger" 
+// It bothers me there's no space between the weapons. I could manually put a space at the beginning of those strings to fix it,
+// but IDK if that will affect how it reads later on.
 
 function fightSlime () {}
 function fightBeast () {}
