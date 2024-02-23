@@ -97,7 +97,12 @@ function buyHealth (){
 }
 
 function buyWeapon () {
-  if (currentWeapon < weapons.length){
+  if (currentWeapon < weapons.length - 1){
+    // I had an error to fix. The currentWeapon variable is the index of the weapons [] array, but the array indexing starts at
+    // 0 (the first object listed in the array). The index of the last element in an array is one less than the length of the array.
+    // This means that the weapons.length is showing as 4 (0, 1, 2, 3), but we need it to be thinking about the index, where the last 
+    // object listed in the array is indexed as 3. 
+    //  So to fix this, I changed the if condition to check weapons.length - 1 , instead of weapons length.
     if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
@@ -111,9 +116,7 @@ function buyWeapon () {
     }
   }
 }
-// Arrays have a length property that returns the number of items in the array. I might want to add new values to the weapons [] array
-// in the future. I changed my if condition to check if currentWeapon is less than the length of the weapons [] array. If it is, 
-// it will run the buyWeapon().
 
 function fightSlime () {}
 function fightBeast () {}
+// console.log()
