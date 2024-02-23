@@ -5,7 +5,7 @@ let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
-// Inventory is an array because of the square brackets []. 
+// 
 const button1 = document.querySelector("#button1"); 
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3"); 
@@ -105,11 +105,12 @@ function buyWeapon () {
     let newWeapon = weapons[currentWeapon].name;
     text.innerText = "You now have a " + newWeapon + ".";
     inventory.push(newWeapon);
+    text.innerText += " In your inventory you have: ";
   }
 }
-// Back at the beginning of this project, I created the inventory [] array (located at the top). I added the newWeapon variable to 
-// the END of the inventory array using the push() method. So even though I can't see it, the inventory [] now looks like this:
-// let inventory = ["stick", newWeapon];
+// Up until now, any time text.innerText was updated, the old text was erased. This time, I used the += operator to add text to the 
+// end of text.innerText. Notice the spaces at the beginning and end, which need to be manually input. The innerText will now read:
+// "You now have a DAGGER. In your inventory you have: "
 
 function fightSlime () {}
 function fightBeast () {}
