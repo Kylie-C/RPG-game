@@ -105,12 +105,11 @@ function buyWeapon () {
     text.innerText = "You now have a " + newWeapon + ".";
     inventory.push(newWeapon);
     text.innerText += " In your inventory you have: " + inventory;
+  } else {
+    text.innerText = "You do not have enough gold to buy a weapon."
   }
 }
-// I used the concatenation operator at the end of the string to add the contents of the inventory array to the string. It currently
-// reads as "You now have a dagger. In your inventory you have: stick,dagger" 
-// It bothers me there's no space between the weapons. I could manually put a space at the beginning of those strings to fix it,
-// but IDK if that will affect how it reads later on.
+// Added an else statement to my buyWeapon (). In that statement, I set text.innerText to equal the above string.
 
 function fightSlime () {}
 function fightBeast () {}
