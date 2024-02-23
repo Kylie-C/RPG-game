@@ -97,7 +97,7 @@ function buyHealth (){
 }
 
 function buyWeapon () {
-  if (currentWeapon < 3){
+  if (currentWeapon < weapons.length){
     if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
@@ -111,8 +111,9 @@ function buyWeapon () {
     }
   }
 }
-// Once a player had the best weapon, they cannot buy another one. I wrapped all of the code in my buyWeapon function inside 
-// another if statement. The condition checks if currentWeapon is less than 3 (the index of the last weapon).
+// Arrays have a length property that returns the number of items in the array. I might want to add new values to the weapons [] array
+// in the future. I changed my if condition to check if currentWeapon is less than the length of the weapons [] array. If it is, 
+// it will run the buyWeapon().
 
 function fightSlime () {}
 function fightBeast () {}
