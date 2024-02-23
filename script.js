@@ -97,7 +97,8 @@ function buyHealth (){
 }
 
 function buyWeapon () {
-  if (gold >= 30) {
+  if (currentWeapon < 3){
+    if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
     goldText.innerText = gold;
@@ -105,11 +106,13 @@ function buyWeapon () {
     text.innerText = "You now have a " + newWeapon + ".";
     inventory.push(newWeapon);
     text.innerText += " In your inventory you have: " + inventory;
-  } else {
-    text.innerText = "You do not have enough gold to buy a weapon."
+    } else {
+      text.innerText = "You do not have enough gold to buy a weapon.";
+    }
   }
 }
-// Added an else statement to my buyWeapon (). In that statement, I set text.innerText to equal the above string.
+// Once a player had the best weapon, they cannot buy another one. I wrapped all of the code in my buyWeapon function inside 
+// another if statement. The condition checks if currentWeapon is less than 3 (the index of the last weapon).
 
 function fightSlime () {}
 function fightBeast () {}
