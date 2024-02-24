@@ -97,10 +97,9 @@ function buyWeapon () {
     button2.onclick = sellWeapon;
     }
 }
-// If this else {} statement runs, it will change the innerText of button2 to read "Sell weapon for 15 gold". 
-// The ability to sell their old weapons will only become available once they have the most powerful weapon, which is why it goes
-// in the else {} statement. When the user clicks on button2, it will eventually run a function named sellWeapon, but this 
-// function hasn't been created yet.
+
+function sellWeapon () {}
+// Created an empty sellWeapon () {} function.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
