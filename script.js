@@ -98,8 +98,11 @@ function buyWeapon () {
     }
 }
 
-function sellWeapon () {}
-// Created an empty sellWeapon () {} function.
+function sellWeapon () {
+  if (inventory.length > 1) {}
+}
+// The player should not be able to sell their only weapon, so this if {} is checking that the user's inventory is greater than 1
+// before the rest of the code (not created yet) will run.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
