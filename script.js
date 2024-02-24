@@ -16,45 +16,27 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
-  {
-    name: "stick",
-    power: 5
-  },
-    {
-    name: "dagger",
-    power: 30
-  },
-    {
-    name: "claw hammer",
-    power: 50
-  },
-    {
-    name: "sword",
-    power: 100
-  },
+  {name: "stick", power: 5},
+  {name: "dagger", power: 30},
+  {name: "claw hammer", power: 50},
+  {name: "sword", power: 100},
 ];
 
 const locations = [
-    {
-        name: "town square",
-        "button text": ["Go to store", "Go to cave", "Fight dragon"],
-        "button functions": [goStore, goCave, fightDragon],
-        text: "You are in the town square. You see a sign that says \"Store\"."
-    },
-    {
-        name: "store",
-        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
-        "button functions": [buyHealth, buyWeapon, goTown],
-        text: "You enter the store."
-    },
-    {
-        name: "cave",
-        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-        "button functions": [fightSlime, fightBeast, goTown],
-        text: "You enter the cave. You see some monsters."
-    },
+    {name: "town square",
+      "button text": ["Go to store", "Go to cave", "Fight dragon"],
+      "button functions": [goStore, goCave, fightDragon],
+      text: "You are in the town square. You see a sign that says \"Store\"."},
+    {name: "store",
+      "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+      "button functions": [buyHealth, buyWeapon, goTown],
+      text: "You enter the store."},
+    {name: "cave",
+      "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+      "button functions": [fightSlime, fightBeast, goTown],
+      text: "You enter the cave. You see some monsters."},
   ];
-
+// Just cleaned up the spacing by putting the code on one line instead of multiple.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -98,11 +80,6 @@ function buyHealth (){
 
 function buyWeapon () {
   if (currentWeapon < weapons.length - 1){
-    // I had an error to fix. The currentWeapon variable is the index of the weapons [] array, but the array indexing starts at
-    // 0 (the first object listed in the array). The index of the last element in an array is one less than the length of the array.
-    // This means that the weapons.length is showing as 4 (0, 1, 2, 3), but we need it to be thinking about the index, where the last 
-    // object listed in the array is indexed as 3. 
-    //  So to fix this, I changed the if condition to check weapons.length - 1 , instead of weapons length.
     if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
@@ -114,9 +91,12 @@ function buyWeapon () {
     } else {
       text.innerText = "You do not have enough gold to buy a weapon.";
     }
-  }
+  } else {
+    text.innerText = "You already have the most powerful weapon!";
+    }
 }
-
+// Added an else {} statement to inform the user when they are trying to buy the next weapon if they already have the most
+// powerful weapon.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
