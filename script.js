@@ -99,10 +99,12 @@ function buyWeapon () {
 }
 
 function sellWeapon () {
-  if (inventory.length > 1) {}
+  if (inventory.length > 1) {
+    gold += 15;
+    goldText.innerText = gold;
+  }
 }
-// The player should not be able to sell their only weapon, so this if {} is checking that the user's inventory is greater than 1
-// before the rest of the code (not created yet) will run.
+// I set the gold equal to 15 MORE than its current value. I also updated the goldText.innerText to display the new value.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
