@@ -2,6 +2,7 @@ let xp = 0;
 let health = 100; 
 let gold = 50;
 let currentWeapon = 0;
+// This is the global variable (all the code can access this code) that was already here.
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
@@ -102,9 +103,14 @@ function sellWeapon () {
   if (inventory.length > 1) {
     gold += 15;
     goldText.innerText = gold;
+    let currentWeapon;
   }
 }
-// I set the gold equal to 15 MORE than its current value. I also updated the goldText.innerText to display the new value.
+// This currentWeapon variable is ONLY accessible inside this if {} statemenr because I specifically declared it in here. Even though 
+// thos variable has the same exact name as the global variable above that I had prior created, they are two seperate variables.
+// This is called block scope. This variable is only scoped to this block of code. Scope is the term used to describe where a
+// variable can be accessed. If a variable is declared inside a block of code (like an if {}, else {}, or function), it is only
+// accessible to the code inside that block.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
