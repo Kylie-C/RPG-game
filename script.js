@@ -36,7 +36,7 @@ const locations = [
       "button functions": [fightSlime, fightBeast, goTown],
       text: "You enter the cave. You see some monsters."},
   ];
-// Just cleaned up the spacing by putting the code on one line instead of multiple.
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -93,10 +93,14 @@ function buyWeapon () {
     }
   } else {
     text.innerText = "You already have the most powerful weapon!";
+    button2.innerText = "Sell weapon for 15 gold";
+    button2.onclick = sellWeapon;
     }
 }
-// Added an else {} statement to inform the user when they are trying to buy the next weapon if they already have the most
-// powerful weapon.
+// If this else {} statement runs, it will change the innerText of button2 to read "Sell weapon for 15 gold". 
+// The ability to sell their old weapons will only become available once they have the most powerful weapon, which is why it goes
+// in the else {} statement. When the user clicks on button2, it will eventually run a function named sellWeapon, but this 
+// function hasn't been created yet.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
