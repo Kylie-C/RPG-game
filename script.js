@@ -5,7 +5,6 @@ let currentWeapon = 0;
 let fighting;
 let monsterHealth; 
 let inventory = ["stick"]; 
-// This is the inventory array
 const button1 = document.querySelector("#button1"); 
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3"); 
@@ -104,10 +103,10 @@ function sellWeapon () {
     gold += 15;
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
+    text.innerText = "You sold a " + currentWeapon + ".";
   }
 }
-// The shift () method on an array removes the first element in the array and returns it. So in this instance, the shift () method
-// is taking the first element from the inventory array and I'm assigning it to my currentWeapon variable.
+// Used the concatenation operator to set text.innerText to the following string.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
