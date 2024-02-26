@@ -22,20 +22,34 @@ const weapons = [
   {name: "sword", power: 100},
 ];
 
+const monsters = [
+  {name: "slime",
+  level: 2,
+  health: 15},
+  {name: "fanged beast",
+  level: 8,
+  health: 60,},
+  {name: "dragon",
+  level: 20,
+  health: 300}
+];
+// Defined a monsters variable and assigned it an array. I set that array to have 3 objects, each with a name, level, and health
+// properties. Then set each object's values.
+
 const locations = [
-    {name: "town square",
-      "button text": ["Go to store", "Go to cave", "Fight dragon"],
-      "button functions": [goStore, goCave, fightDragon],
-      text: "You are in the town square. You see a sign that says \"Store\"."},
-    {name: "store",
-      "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
-      "button functions": [buyHealth, buyWeapon, goTown],
-      text: "You enter the store."},
-    {name: "cave",
-      "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-      "button functions": [fightSlime, fightBeast, goTown],
-      text: "You enter the cave. You see some monsters."},
-  ];
+  {name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    "button functions": [goStore, goCave, fightDragon],
+    text: "You are in the town square. You see a sign that says \"Store\"."},
+  {name: "store",
+    "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+    "button functions": [buyHealth, buyWeapon, goTown],
+    text: "You enter the store."},
+  {name: "cave",
+    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+    "button functions": [fightSlime, fightBeast, goTown],
+    text: "You enter the cave. You see some monsters."},
+];
 
 button1.onclick= goStore
 button2.onclick = goCave;
@@ -61,10 +75,6 @@ function goStore() {
 
 function goCave() {
     update(locations[2]);
-  }
-
-function fightDragon (){
-    console.log("Fighting dragon.")
   }
 
 function buyHealth (){
@@ -107,7 +117,11 @@ function sellWeapon () {
     text.innerText += " In your inventory you have: " + inventory;
   } else {text.innerText = "Don't sell your only weapon!"}
 }
-// Set an else statement to run when the inventory length is not more than one.
+// 
 function fightSlime () {}
 function fightBeast () {}
+function fightDragon (){
+  console.log("Fighting dragon.")
+}
+// Moved the already existing fightDragon (){} to be with the other fighting functions for organizational purposes.
 // console.log()
