@@ -105,9 +105,9 @@ function sellWeapon () {
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
     text.innerText += " In your inventory you have: " + inventory;
-  }
+  } else {text.innerText = "Don't sell your only weapon!"}
 }
-// Used the += operator to add the new string and the contents of inventory to the text.innerText.
+// Set an else statement to run when the inventory length is not more than one.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
