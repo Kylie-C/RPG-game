@@ -33,8 +33,6 @@ const monsters = [
   level: 20,
   health: 300}
 ];
-// Defined a monsters variable and assigned it an array. I set that array to have 3 objects, each with a name, level, and health
-// properties. Then set each object's values.
 
 const locations = [
   {name: "town square",
@@ -117,11 +115,14 @@ function sellWeapon () {
     text.innerText += " In your inventory you have: " + inventory;
   } else {text.innerText = "Don't sell your only weapon!"}
 }
-// 
+
+function goFight () {}
+// Fighting each type of monster will use similar logic, so I created an empty function called goFight to manage this logic.
+
 function fightSlime () {}
 function fightBeast () {}
 function fightDragon (){
   console.log("Fighting dragon.")
 }
-// Moved the already existing fightDragon (){} to be with the other fighting functions for organizational purposes.
+
 // console.log()
