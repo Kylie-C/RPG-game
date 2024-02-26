@@ -104,9 +104,10 @@ function sellWeapon () {
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
+    text.innerText += " In your inventory you have: " + inventory;
   }
 }
-// Used the concatenation operator to set text.innerText to the following string.
+// Used the += operator to add the new string and the contents of inventory to the text.innerText.
 function fightSlime () {}
 function fightBeast () {}
 // console.log()
