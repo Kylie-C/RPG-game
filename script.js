@@ -52,7 +52,7 @@ const locations = [
   "button functions": [attack, dodge, goTown],
   text: "You are fighting a monster."}
 ];
-// Added a new object to the end of the locations[] array, following the same properties as the rest of the objects.
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -120,8 +120,11 @@ function sellWeapon () {
   } else {text.innerText = "Don't sell your only weapon!"}
 }
 
-function goFight () {}
-
+function goFight () {
+  update(locations[3]);
+}
+// In my goFight(){}, I'm calling the update(){} with the 4th object in my locations as an argument. Remember with this indexing,
+// 3 actually represents the 4th object in that array since 0 represents the first.
 
 function fightSlime () {
   fighting = 0;
