@@ -47,8 +47,12 @@ const locations = [
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters."},
+  {name: "fight",
+  "button text": ["Attack", "Dodge", "Run"],
+  "button functions": [attack, dodge, goTown],
+  text: "You are fighting a monster."}
 ];
-
+// Added a new object to the end of the locations[] array, following the same properties as the rest of the objects.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -139,5 +143,5 @@ function attack (){
 
 function dodge (){
 }
-// Created empty functions called attack and dodge
+// 
 // console.log()
