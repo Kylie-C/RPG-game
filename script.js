@@ -133,6 +133,11 @@ function fightDragon (){
   fighting = 2;
   goFight();
 }
-// Removed the console.log call. Mimiced what I did in the fightSlime(){}, but adjusted it so fighting would call the 2nd (beast)
-// and 3rd (dragon) objects listed in the monsters array.
+
+function attack (){
+}
+
+function dodge (){
+}
+// Created empty functions called attack and dodge
 // console.log()
