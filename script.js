@@ -117,17 +117,22 @@ function sellWeapon () {
 }
 
 function goFight () {}
-//Here's the goFight() {}
+
 
 function fightSlime () {
   fighting = 0;
   goFight();
 }
-// In my fightSlime (){}, I set fight, which has already been declared at the top so I don't need to declare it with let or const
-//  here, equal to 0 (the index of slime in the monsters array). Then I called the goFight function.
-function fightBeast () {}
-function fightDragon (){
-  console.log("Fighting dragon.")
+
+function fightBeast () {
+  fighting = 1;
+  goFight();
 }
 
+function fightDragon (){
+  fighting = 2;
+  goFight();
+}
+// Removed the console.log call. Mimiced what I did in the fightSlime(){}, but adjusted it so fighting would call the 2nd (beast)
+// and 3rd (dragon) objects listed in the monsters array.
 // console.log()
