@@ -117,9 +117,14 @@ function sellWeapon () {
 }
 
 function goFight () {}
-// Fighting each type of monster will use similar logic, so I created an empty function called goFight to manage this logic.
+//Here's the goFight() {}
 
-function fightSlime () {}
+function fightSlime () {
+  fighting = 0;
+  goFight();
+}
+// In my fightSlime (){}, I set fight, which has already been declared at the top so I don't need to declare it with let or const
+//  here, equal to 0 (the index of slime in the monsters array). Then I called the goFight function.
 function fightBeast () {}
 function fightDragon (){
   console.log("Fighting dragon.")
