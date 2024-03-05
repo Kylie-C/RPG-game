@@ -13,6 +13,7 @@ const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
+// Here is the monsterStats variable!
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
@@ -33,7 +34,7 @@ const monsters = [
   level: 20,
   health: 300}
 ];
-// HERE IS THE ARRAY OF MONSTERS WITH THEIR HEALTH PROPERTIES LISTED
+
 const locations = [
   {name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
@@ -123,32 +124,39 @@ function sellWeapon () {
 function goFight () {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
+  monsterStats.style.display = 'block';
 }
-// I set the monsterHealth variable (already declared at the top) to be the health of the current monster by accessing the health
-// property of monsters[fighting] with dot notation. The fighting property is noted before and going to be used to call which 
-// monster the player is fighting, based on the object location in the monsters [] array. fighting = 0 is the slime because it's
-// the first object in the array. fighting = 1 is the beast because it's the second object in the array. etc.
-// NOTE: dot notation works like object.propertyName   , so the object in mine is the monsters[] array, and the propertyName is 
-// health. Each function fightMONSTERNAME (){} has the fighting variable set to its number, located below.
+// By default, the HTML element that shows the monster's stats has been hidden with CSS (go look in the CSS file). When the 
+// player clicks the "Fight dragon" button, the monster's stats SHOULD be displayed. I accomplished this by using the STYLE and 
+// DISPLAY properties on the monsterStats element. The style property is used to access the inline style of an element and the 
+// display property is used to set the visibility of an element. I already have the monsterStats variable declared and being
+// referenced to the html using the document.querySelector() located at the top. So the code above is how I used the style and 
+// display properties to show it as 'block'. Remember that block sets the element on it's own line, which is why they're listed
+// vertically. It's important to note that .style.display must be listed in that order.
+
+// ALSO NOTE I RAN INTO THIS UNIQUE BUG - When I was typing the word "style", I had to put a space, then delete it BEFORE I could
+// put the period. For whatever reason (Louisa thinks it's an extension I have installed), if I type "style." it would 
+// autocorrect to computedStyleMap and would NOT work. However, NOW that I manually did it, it's now working...Odd.
+
 function fightSlime () {
   fighting = 0;
   goFight();
 }
-// HERE
+
 function fightBeast () {
   fighting = 1;
   goFight();
 }
-// HERE
+
 function fightDragon (){
   fighting = 2;
   goFight();
 }
-// HERE
+
 function attack (){
 }
 
 function dodge (){
 }
-// 
+
 // console.log()
