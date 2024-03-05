@@ -13,7 +13,6 @@ const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
-// Here is the monsterStats variable!
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
@@ -126,17 +125,9 @@ function goFight () {
   monsterHealth = monsters[fighting].health;
   monsterStats.style.display = 'block';
 }
-// By default, the HTML element that shows the monster's stats has been hidden with CSS (go look in the CSS file). When the 
-// player clicks the "Fight dragon" button, the monster's stats SHOULD be displayed. I accomplished this by using the STYLE and 
-// DISPLAY properties on the monsterStats element. The style property is used to access the inline style of an element and the 
-// display property is used to set the visibility of an element. I already have the monsterStats variable declared and being
-// referenced to the html using the document.querySelector() located at the top. So the code above is how I used the style and 
-// display properties to show it as 'block'. Remember that block sets the element on it's own line, which is why they're listed
-// vertically. It's important to note that .style.display must be listed in that order.
-
-// ALSO NOTE I RAN INTO THIS UNIQUE BUG - When I was typing the word "style", I had to put a space, then delete it BEFORE I could
-// put the period. For whatever reason (Louisa thinks it's an extension I have installed), if I type "style." it would 
-// autocorrect to computedStyleMap and would NOT work. However, NOW that I manually did it, it's now working...Odd.
+// Updated the text for the current monster's name and health.
+// Started by assigning monsters[fighting].name to the innerText property of monsterName. Then, assigned monsterHealth to the 
+// innerText property monsterHealthText.
 
 function fightSlime () {
   fighting = 0;
