@@ -127,12 +127,6 @@ function goFight () {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
-// I forgot to update this code so THIS is the real update.
-// Updated the text for the current monster's name and health.
-// Started by assigning monsters[fighting].name to the innerText property of monsterName. Then, assigned monsterHealth to the 
-// innerText property monsterHealthText.
-// I also want to note a new bug that will need to be fixed. When you click run, the monsterName and monsterHealthText continue showing
-// even out of battle.
 
 function fightSlime () {
   fighting = 0;
@@ -150,8 +144,11 @@ function fightDragon (){
 }
 
 function attack (){
+  text.innerText = "The " + monsters[fighting].name + " attacks.";
 }
-
+// Starting to build the attack function.
+// Updated the text message to say "The <monster name> attacks.", replacing <monster name> with the actual monster's name using the 
+// variable monsters[fighting].name. Remember to manually put the spaces in the strings when concatenating.
 function dodge (){
 }
 
