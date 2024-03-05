@@ -33,7 +33,7 @@ const monsters = [
   level: 20,
   health: 300}
 ];
-
+// HERE IS THE ARRAY OF MONSTERS WITH THEIR HEALTH PROPERTIES LISTED
 const locations = [
   {name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
@@ -122,25 +122,29 @@ function sellWeapon () {
 
 function goFight () {
   update(locations[3]);
+  monsterHealth = monsters[fighting].health;
 }
-// In my goFight(){}, I'm calling the update(){} with the 4th object in my locations as an argument. Remember with this indexing,
-// 3 actually represents the 4th object in that array since 0 represents the first.
-
+// I set the monsterHealth variable (already declared at the top) to be the health of the current monster by accessing the health
+// property of monsters[fighting] with dot notation. The fighting property is noted before and going to be used to call which 
+// monster the player is fighting, based on the object location in the monsters [] array. fighting = 0 is the slime because it's
+// the first object in the array. fighting = 1 is the beast because it's the second object in the array. etc.
+// NOTE: dot notation works like object.propertyName   , so the object in mine is the monsters[] array, and the propertyName is 
+// health. Each function fightMONSTERNAME (){} has the fighting variable set to its number, located below.
 function fightSlime () {
   fighting = 0;
   goFight();
 }
-
+// HERE
 function fightBeast () {
   fighting = 1;
   goFight();
 }
-
+// HERE
 function fightDragon (){
   fighting = 2;
   goFight();
 }
-
+// HERE
 function attack (){
 }
 
