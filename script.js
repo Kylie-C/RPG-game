@@ -145,11 +145,14 @@ function fightDragon (){
 
 function attack (){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
-  text.innerText += " You attack it with your " + weapon[currentWeapon].name + ".";
+  text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
+  health -= monsters[fighting].level;
 }
-// Used the addition operator += to add the new string. weapon[currentWeapon].name will show the name of the currentWeapon.
-// Remember that the weapons [] array contains the all the objects (weapon names) while the currentWeapon variable is what determines
-// which weapon I currently have.
+// Realized I forgot to make weapons plural, so I fixed that.
+// I set the health equal to health minus the monster's level using the subtraction operator -=.
+// I forget what it's called, but for the monsters[fighting].level thing, I had to call the array first, monsters[], then specify
+// the variable, fighting, and finally I specified what variable in the array I wanted to be subtracted, level.
+// So it's array[variable].moreSpecificVariable
 function dodge (){
 }
 
