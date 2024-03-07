@@ -145,10 +145,11 @@ function fightDragon (){
 
 function attack (){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
+  text.innerText += " You attack it with your " + weapon[currentWeapon].name + ".";
 }
-// Starting to build the attack function.
-// Updated the text message to say "The <monster name> attacks.", replacing <monster name> with the actual monster's name using the 
-// variable monsters[fighting].name. Remember to manually put the spaces in the strings when concatenating.
+// Used the addition operator += to add the new string. weapon[currentWeapon].name will show the name of the currentWeapon.
+// Remember that the weapons [] array contains the all the objects (weapon names) while the currentWeapon variable is what determines
+// which weapon I currently have.
 function dodge (){
 }
 
