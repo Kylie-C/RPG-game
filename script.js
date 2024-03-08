@@ -156,15 +156,16 @@ function attack (){
     defeatMonster()
   }
 }
-// 
+
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
 
 function defeatMonster (){
   gold += Math.floor(monsters[fighting].level * 6.7);
+  xp = monsters[fighting].level;
 }
-// Set gold equal to gold plus the monster's level times 6.7. I used Math.floor() to round the result down to the nearest integer.
+// Set xp to xp plus the monster's level.
 function lose (){
 }
 
