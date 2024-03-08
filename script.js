@@ -147,10 +147,18 @@ function attack (){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= monsters[fighting].level;
-  monsterHealth -= weapons[currentWeapon].power;
+  monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
 }
-// Set monsterHealth to monsterHealth minus -= the power of the player's current weapons but doing 
-// array[variable].specificVariableInThatArray
+// The Math object in js contains static properties and methods for mathematical constants and functions. One of those is 
+// Math.random(), which generates a random number from 0 (which INCLUDES the number you determine) to 1 (which EXCLUDES the number
+// you determine). 
+// For example, 0 is like greater than or equal >= or less than or equal to <= because it INCLUDES the number you state, but
+// 1 is like greater than > or less than < because it does NOT include the number.
+// Another is Math.floor(), which rounds a given number down to the nearest integer (a number that is not a fraction / decimal).
+// Using these, you can generate a random number within a range. E.g., this generates a random number BETWEEN 1 and 5:
+// Math.floor(Math.random() * 5) + 1;
+// So following that pattern, I used the addition operator (+) to add a random number BETWEEN 1 and the value of xp to my 
+// monsterHealth -= weapons[currentWeapon].power
 function dodge (){
 }
 
