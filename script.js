@@ -160,12 +160,12 @@ function attack (){
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
-// Added text.innerText in the dodge () function to equal the following string, where it will tell me the name of the current monster
-// I'm fighting.    Remember, it's array[variable].specificVariableWithinThatArray.
-function defeatMonster (){
-}
 
+function defeatMonster (){
+  gold += Math.floor(monsters[fighting].level * 6.7);
+}
+// Set gold equal to gold plus the monster's level times 6.7. I used Math.floor() to round the result down to the nearest integer.
 function lose (){
 }
-// 
+
 // console.log()
