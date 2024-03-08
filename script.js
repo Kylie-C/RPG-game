@@ -164,8 +164,10 @@ function dodge (){
 function defeatMonster (){
   gold += Math.floor(monsters[fighting].level * 6.7);
   xp = monsters[fighting].level;
+  goldText.innerText = gold;
+  xpText.innerText = xp;
 }
-// Set xp to xp plus the monster's level.
+// Updated the innerText of the goldText and xpText.
 function lose (){
 }
 
