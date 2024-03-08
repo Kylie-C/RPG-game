@@ -166,8 +166,10 @@ function defeatMonster (){
   xp = monsters[fighting].level;
   goldText.innerText = gold;
   xpText.innerText = xp;
+  update(locations[4]);
 }
-// Updated the innerText of the goldText and xpText.
+// Finished the defeatMonster() function by calling the update function with locations[4] as the argument. I'm not sure what the 4
+// is referring to because I don't see 5 objects in the locations[] array (remember 0 is actually referring to the 1st object).
 function lose (){
 }
 
