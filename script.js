@@ -152,11 +152,18 @@ function attack (){
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0){
     lose();
+  } else if (monsterHealth <= 0) {
+    defeatMonster()
   }
 }
-// Added an if statement to check if health is less than or equal to 0, then it will call the lose () function, which hasn't been
-// created yet.
+// 
 function dodge (){
 }
 
+function defeatMonster (){
+}
+
+function lose (){
+}
+// Created the defeatMonster() and lose() functions at the end of the code.
 // console.log()
