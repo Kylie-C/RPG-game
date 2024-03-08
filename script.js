@@ -158,12 +158,14 @@ function attack (){
 }
 // 
 function dodge (){
+  text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
-
+// Added text.innerText in the dodge () function to equal the following string, where it will tell me the name of the current monster
+// I'm fighting.    Remember, it's array[variable].specificVariableWithinThatArray.
 function defeatMonster (){
 }
 
 function lose (){
 }
-// Created the defeatMonster() and lose() functions at the end of the code.
+// 
 // console.log()
