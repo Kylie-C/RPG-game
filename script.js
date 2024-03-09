@@ -60,9 +60,7 @@ const locations = [
   "button functions": [restart, restart, restart],
   text: "You die. &#x2620;"}
 ];
-// Added a 6th object to the locations[] array. Set the name property to "lose", set "button text" to an array with 3 "REPLAY?"
-// strings, set "button functions" to an array with 3 restart variables (this calls the restart() function), and set text to that
-// string.
+// 
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -164,10 +162,17 @@ function attack (){
   if (health <= 0){
     lose();
   } else if (monsterHealth <= 0) {
-    defeatMonster()
+    if (fighting === 2) {
+      winGame();
+    } else {
+      defeatMonster();
+    }
   }
 }
-
+// Inside the else if block, I created another if and else statement. If the player is fighting the dragon (fighting would be 2), 
+// call the winGame() function, which hasn't been created yet. Then I moved the defeatMonster() function call to the else block.
+// I had to use the strict equality === operator to check if fighting is equal to 2. The strict equality operator will check if the
+// values are equal and if they are the same data type.
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
@@ -195,5 +200,5 @@ function restart(){
   xpText.innerText = xp;
   goTown();
 }
-// 
+
 // console.log()
