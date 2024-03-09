@@ -178,6 +178,19 @@ function defeatMonster (){
 function lose (){
   update(locations[5]);
 }
-// In the lose function, I called the update function and passed in the 6th object of my locations array (locations[5]). Note that
-// I haven't created this 6th object yet.
+
+function restart(){
+  xp = 0;
+  health = 100;
+  gold = 50;
+  currentWeapon = 0;
+  inventory = ["stick"];
+  goldText.innerText = gold;
+  healthText.innerText = health;
+  xpText.innerText = xp;
+  goTown();
+}
+// At the end of my code, I created a restart function. Inside this function, I set xp to 0, health to 100, gold to 50, currentWeapon
+// to 0 (0 = the first string, which is a stick), and set inventory to an array with the string "stick". I updated the innerText of
+// goldText, healthText, and xpText to their current values. Finally, I called the goTown() function.
 // console.log()
