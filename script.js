@@ -60,7 +60,7 @@ const locations = [
   "button functions": [restart, restart, restart],
   text: "You die. &#x2620;"}
 ];
-// 
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -75,9 +75,7 @@ function update(location) {
     button3.onclick = location["button functions"][2];
     text.innerHTML = location.text;
   }
-// In order for the &#x2620; emoticon text to properly display on the page (it WAS showing as just that, not the skull emoticon),
-// I needed to use the innerHTML property, so I just changed innerText to innerHTML and now the emoticon works!
-// The innerHTML property allows you to access or modify the content inside an HTML element using JavaScript.
+
 function goTown() {
     update(locations[0]);
   }
@@ -188,6 +186,11 @@ function lose (){
   update(locations[5]);
 }
 
+function winGame (){
+  update(locations[6]);
+}
+// After the lose function, I created a function called winGame(). Inside, I called the update() function and passed the 
+// locations[6]. There is no 7th object yet, so I'm guessing that comes next.
 function restart(){
   xp = 0;
   health = 100;
