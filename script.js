@@ -54,10 +54,15 @@ const locations = [
   {name: "kill monster",
   "button text": ["Go to town square", "Go to town square", "Go to town square"],
   "button functions": [goTown, goTown, goTown],
-  text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
-  }
+  text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'},
+  {name: "lose",
+  "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+  "button functions": [restart, restart, restart],
+  text: "You die. &#x2620;"}
 ];
-
+// Added a 6th object to the locations[] array. Set the name property to "lose", set "button text" to an array with 3 "REPLAY?"
+// strings, set "button functions" to an array with 3 restart variables (this calls the restart() function), and set text to that
+// string.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -190,7 +195,5 @@ function restart(){
   xpText.innerText = xp;
   goTown();
 }
-// At the end of my code, I created a restart function. Inside this function, I set xp to 0, health to 100, gold to 50, currentWeapon
-// to 0 (0 = the first string, which is a stick), and set inventory to an array with the string "stick". I updated the innerText of
-// goldText, healthText, and xpText to their current values. Finally, I called the goTown() function.
+// 
 // console.log()
