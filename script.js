@@ -50,9 +50,17 @@ const locations = [
   {name: "fight",
   "button text": ["Attack", "Dodge", "Run"],
   "button functions": [attack, dodge, goTown],
-  text: "You are fighting a monster."}
+  text: "You are fighting a monster."},
+  {name: "kill monster",
+  "button text": ["Go to town square", "Go to town square", "Go to town square"],
+  "button functions": [goTown, goTown, goTown],
+  text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+  }
 ];
-
+// I added a 5th object in the locations [] array so the locations[4] will now work. The user will only have 1 option, goTown()
+// function. 
+// I also used a different strategy to add quotes within a string. I changed the outer double quotes "" to single quotes ', so I
+// could use the double quotes "" around the word Arg!
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -168,8 +176,7 @@ function defeatMonster (){
   xpText.innerText = xp;
   update(locations[4]);
 }
-// Finished the defeatMonster() function by calling the update function with locations[4] as the argument. I'm not sure what the 4
-// is referring to because I don't see 5 objects in the locations[] array (remember 0 is actually referring to the 1st object).
+
 function lose (){
 }
 
