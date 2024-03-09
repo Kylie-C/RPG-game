@@ -72,8 +72,7 @@ function update(location) {
     button3.onclick = location["button functions"][2];
     text.innerText = location.text;
   }
-// After the monster is defeated, the monster's stat box should no longer display. So on the first line in the update() function,
-// I used monsterStats.style.display and set it to none. Remember that whatever you set it to needs to be in single quotes '.
+
 function goTown() {
     update(locations[0]);
   }
@@ -177,6 +176,8 @@ function defeatMonster (){
 }
 
 function lose (){
+  update(locations[5]);
 }
-
+// In the lose function, I called the update function and passed in the 6th object of my locations array (locations[5]). Note that
+// I haven't created this 6th object yet.
 // console.log()
