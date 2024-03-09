@@ -57,15 +57,13 @@ const locations = [
   text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
   }
 ];
-// I added a 5th object in the locations [] array so the locations[4] will now work. The user will only have 1 option, goTown()
-// function. 
-// I also used a different strategy to add quotes within a string. I changed the outer double quotes "" to single quotes ', so I
-// could use the double quotes "" around the word Arg!
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 function update(location) {
+    monsterStats.style.display = 'none';
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
@@ -74,7 +72,8 @@ function update(location) {
     button3.onclick = location["button functions"][2];
     text.innerText = location.text;
   }
-
+// After the monster is defeated, the monster's stat box should no longer display. So on the first line in the update() function,
+// I used monsterStats.style.display and set it to none. Remember that whatever you set it to needs to be in single quotes '.
 function goTown() {
     update(locations[0]);
   }
