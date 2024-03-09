@@ -73,9 +73,11 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;
+    text.innerHTML = location.text;
   }
-
+// In order for the &#x2620; emoticon text to properly display on the page (it WAS showing as just that, not the skull emoticon),
+// I needed to use the innerHTML property, so I just changed innerText to innerHTML and now the emoticon works!
+// The innerHTML property allows you to access or modify the content inside an HTML element using JavaScript.
 function goTown() {
     update(locations[0]);
   }
@@ -169,10 +171,7 @@ function attack (){
     }
   }
 }
-// Inside the else if block, I created another if and else statement. If the player is fighting the dragon (fighting would be 2), 
-// call the winGame() function, which hasn't been created yet. Then I moved the defeatMonster() function call to the else block.
-// I had to use the strict equality === operator to check if fighting is equal to 2. The strict equality operator will check if the
-// values are equal and if they are the same data type.
+
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
