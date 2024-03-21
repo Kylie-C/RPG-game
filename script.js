@@ -58,9 +58,14 @@ const locations = [
   {name: "lose",
   "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
   "button functions": [restart, restart, restart],
-  text: "You die. &#x2620;"}
+  text: "You die. &#x2620;"},
+  {name: "win",
+  "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+  "button functions": [restart, restart, restart],
+  text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"}
 ];
-
+// Added another object to the locations [] array. The win object is the same as the lose object, but with a different name and 
+// text.
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -189,8 +194,7 @@ function lose (){
 function winGame (){
   update(locations[6]);
 }
-// After the lose function, I created a function called winGame(). Inside, I called the update() function and passed the 
-// locations[6]. There is no 7th object yet, so I'm guessing that comes next.
+// 
 function restart(){
   xp = 0;
   health = 100;
