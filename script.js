@@ -177,9 +177,11 @@ function attack (){
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   console.log(hit)
+  return hit;
 }
-// Logging the value of hit to the console to use in debugging. Remember that it has to be located within the function because the
-// const variable hit only exists within that function.
+// Functions run specific blocks of code when they are called, but they can also return a value. This value can be assigned to a 
+// variable and used elsewhere in your code.    Here's I'm using the return keyword to return the value of hit at the end of the 
+// function.
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
