@@ -160,10 +160,6 @@ function attack (){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
-// The game is feature-complete at this stage, but we're going to make it more engaging for the user. This will begin by giving
-// the monsters a dynamic attack value. I changed the health -= monsters[fighting].level to the line you see above. This sets
-// health equal to health minus the return value of the getMonsterAttackValue function, and passes the level of the monster
-// as an argument.
   monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
@@ -177,6 +173,10 @@ function attack (){
     }
   }
 }
+
+function getMonsterAttackValue(level) {
+}
+// Created an empty function that takes level as a parameter.
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
