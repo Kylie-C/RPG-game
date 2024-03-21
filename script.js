@@ -175,8 +175,11 @@ function attack (){
 }
 
 function getMonsterAttackValue(level) {
+  const hit = (level * 5) - (Math.floor(Math.random() * xp));
 }
-// Created an empty function that takes level as a parameter.
+// Created a constant variable named hit with the equation above. This equation will set the monster's attack to five times their
+// level, minus a random number between 0 and the player's xp. The Math.floor rounds down and returns the largest integer less than
+// or equal to a given number.
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
