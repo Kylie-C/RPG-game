@@ -64,8 +64,7 @@ const locations = [
   "button functions": [restart, restart, restart],
   text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"}
 ];
-// Added another object to the locations [] array. The win object is the same as the lose object, but with a different name and 
-// text.
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -160,7 +159,11 @@ function fightDragon (){
 function attack (){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
-  health -= monsters[fighting].level;
+  health -= getMonsterAttackValue(monsters[fighting].level);
+// The game is feature-complete at this stage, but we're going to make it more engaging for the user. This will begin by giving
+// the monsters a dynamic attack value. I changed the health -= monsters[fighting].level to the line you see above. This sets
+// health equal to health minus the return value of the getMonsterAttackValue function, and passes the level of the monster
+// as an argument.
   monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
