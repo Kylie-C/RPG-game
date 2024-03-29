@@ -177,11 +177,25 @@ function attack (){
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   console.log(hit)
-  return hit;
+  return hit > 0 ? hit : 0;
 }
-// Functions run specific blocks of code when they are called, but they can also return a value. This value can be assigned to a 
-// variable and used elsewhere in your code.    Here's I'm using the return keyword to return the value of hit at the end of the 
-// function.
+// Previously had you played the game, you might've notived a bug. If your xp is high enough, the getMonsterAttackValue() function
+// would return a negative number, which would actually add to your total health when fighting a monster. I fixed this issue by 
+// using a ternary operator to ensure negative values are not returned.
+// The ternary operator is a conditional operator and can be used as a one-line if-else statement. The syntax is: 
+// CONDITION ? expressionIfTrue : expressionIfFalse         just like you'd see in an if-else statement.
+
+// Here is an example of returning a value using an if-else statement and a refactored example using a ternary operator:
+// IF-ELSE STATEMENT:
+// if (score > 0) {              score > 0 is the condition
+  // return score                score is the expressionIfTrue
+// } else {
+  // return default_score        default_score is the expressionIfFalse
+// }
+
+// TERNARY OPERATOR:
+// return score > 0 ? score : default_score
+
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
