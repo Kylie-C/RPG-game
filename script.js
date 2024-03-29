@@ -161,10 +161,9 @@ function attack (){
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   }
-// In my attack function, below the health variable, I created an if statement and set the condition to call the isMonsterHit() 
-// function.
-  monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+// Moved the monsterHealth assignment into my if block.
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0){
