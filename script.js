@@ -163,7 +163,6 @@ function attack (){
   if (isMonsterHit()) {
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   } else {text.innerText += " You miss."}
-
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0){
@@ -175,8 +174,12 @@ function attack (){
       defeatMonster();
     }
   }
-}
+  if (Math.random() <= .1){
 
+  }
+}
+// On every attack, there should be a chance that they player's weapon breaks. At the end of the atack function, I added an empty
+// if statement with the condition Math.random() <= .1
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   console.log(hit)
@@ -186,11 +189,6 @@ function getMonsterAttackValue(level) {
 function isMonsterHit() {
   return Math.random() > .2 || health < 20;
 }
-// The player should hit if either Math.random() > .2 OR is the player's health is less than 20.
-// At the end of the return statement, I used the logical OR operator, which is ||, to check if health is less than 20.
-// The logical OR operator will use the first value if it is truthy - that is, anything apart from NaN, null, undefined, 0, -0, 0n,
-// "", and false. Otherwise, it will use the second value.
-// For example:   num < 10 || num > 20      means use number less than 10 OR use number greater than 20 if the first is false.
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
