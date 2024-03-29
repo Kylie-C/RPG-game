@@ -163,8 +163,7 @@ function attack (){
   if (isMonsterHit()) {
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   } else {text.innerText += " You miss."}
-// Added an else statement to the first if statement inside my attack() function. In the else statement, I used the += operator
-// to add the text " You miss." to the end of text.innerText
+
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0){
@@ -184,7 +183,11 @@ function getMonsterAttackValue(level) {
   return hit > 0 ? hit : 0;
 }
 
-
+function isMonsterHit() {
+  return Math.random() > .2
+}
+// Created the isMonsterHit() function. This will return a boolean value (true or false) to be used in my if statement.
+// I returned the result of the comparison Math.random() > .2
 
 function dodge (){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
