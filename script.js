@@ -180,10 +180,6 @@ function attack (){
   }
 }
 
-// We don't want a player's only weapon to break. The logical AND operator && checks if two statements are true. I used the logical
-// AND operator && to add a second condition to my if statement. The player's weapon should only break if inventory.length 
-// does not equal (!==) 1.
-
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   console.log(hit)
@@ -213,7 +209,7 @@ function lose (){
 function winGame (){
   update(locations[6]);
 }
-// 
+
 function restart(){
   xp = 0;
   health = 100;
@@ -225,5 +221,11 @@ function restart(){
   xpText.innerText = xp;
   goTown();
 }
+
+function easterEgg (){
+  update(locations[7]);
+}
+// Adding a small easter egg (hidden feature) in the game. I created a new function called easterEgg() which calls the update()
+// function with locations[7] as the argument.
 
 // console.log()
