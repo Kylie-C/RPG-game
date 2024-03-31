@@ -226,7 +226,18 @@ function easterEgg (){
   update(locations[7]);
 }
 
-function pick (guess){}
-// Created an empty pick() function with a parameter named guess.
+function pick (guess){
+
+}
+
+function pickTwo(){
+  pick(2);
+}
+
+function pickEight(){
+  pick(8);
+}
+// Created two new functions named pickTwo and pickEight. Inside each, I called the pick() function and passed either 2 or 8 as
+// the argument depending on the function name.
 
 // console.log()
