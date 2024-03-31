@@ -225,7 +225,8 @@ function restart(){
 function easterEgg (){
   update(locations[7]);
 }
-// Adding a small easter egg (hidden feature) in the game. I created a new function called easterEgg() which calls the update()
-// function with locations[7] as the argument.
+
+function pick (guess){}
+// Created an empty pick() function with a parameter named guess.
 
 // console.log()
