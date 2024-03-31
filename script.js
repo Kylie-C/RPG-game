@@ -62,9 +62,13 @@ const locations = [
   {name: "win",
   "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
   "button functions": [restart, restart, restart],
-  text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"}
+  text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"},
+  {name: "easter egg",
+  "button text": ["2", "8", "Go to town square?"],
+  "button functions": [pickTwo, pickEight, goTown],
+  text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",}
 ];
-
+// Added an 8th object (referred to as location[7]) to the locations[] array. 
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -237,7 +241,5 @@ function pickTwo(){
 function pickEight(){
   pick(8);
 }
-// Created two new functions named pickTwo and pickEight. Inside each, I called the pick() function and passed either 2 or 8 as
-// the argument depending on the function name.
 
 // console.log()
