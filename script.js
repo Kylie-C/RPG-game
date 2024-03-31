@@ -233,12 +233,11 @@ function easterEgg (){
 function pick (guess){
   const numbers = [];
   while (numbers.length < 10){
-
+    numbers.push(Math.floor(Math.random() * 11));
   };
 }
-// After the numbers array, I created a WHILE loop. A WHILE loop accepts a condition, and will run the code in the block {} until the
-// condition is no longer true. 
-// This WHILE loop will run while numbers.length is less than 10.
+// Inside the WHILE loop, I pushed a random number between 0 and 10 to the end of the numbers array using the .push() method. I
+// also created this random number with Math.floor(Math.random() * 11)    where 11 includes the first intiger 0.
 function pickTwo(){
   pick(2);
 }
