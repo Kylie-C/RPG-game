@@ -68,7 +68,7 @@ const locations = [
   "button functions": [pickTwo, pickEight, goTown],
   text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",}
 ];
-// Added an 8th object (referred to as location[7]) to the locations[] array. 
+
 button1.onclick= goStore
 button2.onclick = goCave;
 button3.onclick = fightDragon;
@@ -231,9 +231,9 @@ function easterEgg (){
 }
 
 function pick (guess){
-
+  const numbers = [];
 }
-
+// Inside the pick() function, I used const to initialize a variable names numbers and set it to an empty array.
 function pickTwo(){
   pick(2);
 }
