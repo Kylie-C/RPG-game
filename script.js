@@ -175,11 +175,14 @@ function attack (){
     }
   }
   if (Math.random() <= .1){
-
+    text.innerText += " Your " + inventory.pop() + " breaks.";
   }
 }
-// On every attack, there should be a chance that they player's weapon breaks. At the end of the atack function, I added an empty
-// if statement with the condition Math.random() <= .1
+// Used the += operator to add " Your <weapon> breaks." (take note of the space placements) to the text.innerText. I replaced 
+// the <weapon> with the last item in the inventory aray using inventory.pop(), which will remove the last item in the array AND 
+// return it so it appears in the string. Remember that the currentWeapon IS the last item in the array, which is why this 
+// strategy works.
+
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   console.log(hit)
