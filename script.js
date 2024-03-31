@@ -176,12 +176,16 @@ function attack (){
   }
   if (Math.random() <= .1){
     text.innerText += " Your " + inventory.pop() + " breaks.";
+    currentWeapon--;
   }
 }
-// Used the += operator to add " Your <weapon> breaks." (take note of the space placements) to the text.innerText. I replaced 
-// the <weapon> with the last item in the inventory aray using inventory.pop(), which will remove the last item in the array AND 
-// return it so it appears in the string. Remember that the currentWeapon IS the last item in the array, which is why this 
-// strategy works.
+
+// Remember that the increment operator ++ can be used to increase a variable's value by 1. There is also a DECREMENT OPERATOR -- that
+// can be used to decrease a variable's value by 1. For example:
+// let num = 10;
+// num--;
+// console.log(num);    // Output: 9
+// So, I decremented the value of currentWeapon in my if statement, after I updated the text.
 
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
