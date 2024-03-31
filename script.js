@@ -174,18 +174,15 @@ function attack (){
       defeatMonster();
     }
   }
-  if (Math.random() <= .1){
+  if (Math.random() <= .1 && inventory.length !== 1){
     text.innerText += " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
 }
 
-// Remember that the increment operator ++ can be used to increase a variable's value by 1. There is also a DECREMENT OPERATOR -- that
-// can be used to decrease a variable's value by 1. For example:
-// let num = 10;
-// num--;
-// console.log(num);    // Output: 9
-// So, I decremented the value of currentWeapon in my if statement, after I updated the text.
+// We don't want a player's only weapon to break. The logical AND operator && checks if two statements are true. I used the logical
+// AND operator && to add a second condition to my if statement. The player's weapon should only break if inventory.length 
+// does not equal (!==) 1.
 
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
