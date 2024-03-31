@@ -232,8 +232,13 @@ function easterEgg (){
 
 function pick (guess){
   const numbers = [];
+  while (numbers.length < 10){
+
+  };
 }
-// Inside the pick() function, I used const to initialize a variable names numbers and set it to an empty array.
+// After the numbers array, I created a WHILE loop. A WHILE loop accepts a condition, and will run the code in the block {} until the
+// condition is no longer true. 
+// This WHILE loop will run while numbers.length is less than 10.
 function pickTwo(){
   pick(2);
 }
