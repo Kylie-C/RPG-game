@@ -235,9 +235,11 @@ function pick (guess){
   while (numbers.length < 10){
     numbers.push(Math.floor(Math.random() * 11));
   };
+  text.innerText = "You picked " + guess + ". Here are the random numbers:";
 }
-// Inside the WHILE loop, I pushed a random number between 0 and 10 to the end of the numbers array using the .push() method. I
-// also created this random number with Math.floor(Math.random() * 11)    where 11 includes the first intiger 0.
+// After the while loop, I set the text.innerText to equal "You picked <someGuess>. Here are the random numbers:". I replaced 
+// <someGuess> with the guess function parameter. I assumed I would need to specifiy it as pick(guess), but since 
+// parameters are just a named variable passed into a function, all I need to do is call the parameter.
 function pickTwo(){
   pick(2);
 }
