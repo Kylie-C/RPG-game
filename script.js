@@ -235,11 +235,9 @@ function pick (guess){
   while (numbers.length < 10){
     numbers.push(Math.floor(Math.random() * 11));
   };
-  text.innerText = "You picked " + guess + ". Here are the random numbers:";
+  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
 }
-// After the while loop, I set the text.innerText to equal "You picked <someGuess>. Here are the random numbers:". I replaced 
-// <someGuess> with the guess function parameter. I assumed I would need to specifiy it as pick(guess), but since 
-// parameters are just a named variable passed into a function, all I need to do is call the parameter.
+// \n will cause the next part I add to text.innerText to appear on a new line. Imagine I hit the Enter button on Word.
 function pickTwo(){
   pick(2);
 }
