@@ -236,11 +236,11 @@ function pick (guess){
     numbers.push(Math.floor(Math.random() * 11));
   };
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-  for (let i = 0; i < 10; x++) {};
+  for (let i = 0; i < 10; i++) {};
 }
-// The 2nd statement for a for loop, the condition statement, is evaluated at the beginning of every loop iteration. The loop will 
-// continue as long as the condition evaluates to be true. If we want the loop to run 10 times, the x < 5 needs to be changed to 
-// i < 10
+// The last statement in a for loop, the final expression, is executed at the end of each loop iteration. Since we changed the 
+// initialization statement to use i instead of x, I needed to change x++ to i++. This will increment the initializer by 1 after
+// each loop. So i starts as 0 (a), will increase by 1 after each time it runs (c), and will only run 10 times (b).
 
 
 function pickTwo(){
