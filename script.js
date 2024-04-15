@@ -236,10 +236,12 @@ function pick (guess){
     numbers.push(Math.floor(Math.random() * 11));
   };
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-  for (let x = 1; x < 5; x++) {};
+  for (let i = 0; x < 5; x++) {};
 }
-// a FOR loop runs for a specific number of times, which will be broken down for me in the next several steps. For now, I just
-// copied this loop and pasted it to the end of the pick function.
+// For loops are declared with 3 expressions separated by semicolons.      for (a; b; c).      where a is the initialization 
+// expression, b is the condition, and c is the final expression. The initialization expression is executed only once, before the 
+// loop starts, and is often used to define and set up the loop variable. Think of it like declaring a counter to use in your loop.
+// Many FOR loops use i as the counter and start from 0, so I changed let x = 1; to let i = 0;
 function pickTwo(){
   pick(2);
 }
