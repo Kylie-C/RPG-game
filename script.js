@@ -236,8 +236,10 @@ function pick (guess){
     numbers.push(Math.floor(Math.random() * 11));
   };
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
+  for (let x = 1; x < 5; x++) {};
 }
-// \n will cause the next part I add to text.innerText to appear on a new line. Imagine I hit the Enter button on Word.
+// a FOR loop runs for a specific number of times, which will be broken down for me in the next several steps. For now, I just
+// copied this loop and pasted it to the end of the pick function.
 function pickTwo(){
   pick(2);
 }
