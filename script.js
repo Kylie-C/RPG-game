@@ -236,11 +236,13 @@ function pick (guess){
     numbers.push(Math.floor(Math.random() * 11));
   };
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-  for (let i = 0; i < 10; i++) {};
+  for (let i = 0; i < 10; i++) {
+    text.innerText += numbers[i] + "\n";
+  }
 }
-// The last statement in a for loop, the final expression, is executed at the end of each loop iteration. Since we changed the 
-// initialization statement to use i instead of x, I needed to change x++ to i++. This will increment the initializer by 1 after
-// each loop. So i starts as 0 (a), will increase by 1 after each time it runs (c), and will only run 10 times (b).
+// I wrote logic inside the FOR loop. I used the += operator to add to the end of text.innerText. I added the number at index i of 
+// the numbers[] array, using numbers[i]. Then I added a new line, using the escape sequence I used earlier. NOTE: The \n needs
+// to be INSIDE of a string, which is why I used the + operator to add the string "\n" to it.
 
 
 function pickTwo(){
