@@ -241,11 +241,16 @@ function pick (guess){
   }
   if (numbers.includes(guess)) {
     text.innerText += "Right! You win 20 gold!";
-    goldText.innerText = gold += 20;
+    gold += 20;
+    goldText.innerText = gold;
+  } else {
+    text.innerText += "Wrong! You lose 10 health!";
+    health -= 10;
+    healthText.innerText = health;
   }
 }
-// Added the string "Right! You win 20 gold!" to the end of text.innerText. Also added 20 to the value of gold and updated the 
-// goldText.innerText.    NOTE: I had to use the += operator to add ONTO what already existed.
+// Fixed the syntax of the previous push in the IF statement.
+// Also added en else statement to read the following string. Updated the health and healthText also.
 
 function pickTwo(){
   pick(2);
