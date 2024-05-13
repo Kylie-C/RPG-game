@@ -239,19 +239,13 @@ function pick (guess){
   for (let i = 0; i < 10; i++) {
     text.innerText += numbers[i] + "\n";
   }
-  if (numbers.includes(guess));
+  if (numbers.includes(guess)) {
+    text.innerText += "Right! You win 20 gold!";
+    goldText.innerText = gold += 20;
+  }
 }
-// The .inclues() method determines if an array contains an element and will return either TRUE or FALSE.
-// EXAMPLE:
-// const numbersArray = [1, 2, 3, 4, 5]
-// const number = 3
-// if (numbersArray.includes(number)){
-  // consolde.log("The number is in the array.")
-// }
-
-// So I added an if statement to check if the guess is in the numbers array. Then I used the .includes(guess) method to check if the 
-// array contains the guess.
-
+// Added the string "Right! You win 20 gold!" to the end of text.innerText. Also added 20 to the value of gold and updated the 
+// goldText.innerText.    NOTE: I had to use the += operator to add ONTO what already existed.
 
 function pickTwo(){
   pick(2);
