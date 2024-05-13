@@ -239,10 +239,18 @@ function pick (guess){
   for (let i = 0; i < 10; i++) {
     text.innerText += numbers[i] + "\n";
   }
+  if (numbers.includes(guess));
 }
-// I wrote logic inside the FOR loop. I used the += operator to add to the end of text.innerText. I added the number at index i of 
-// the numbers[] array, using numbers[i]. Then I added a new line, using the escape sequence I used earlier. NOTE: The \n needs
-// to be INSIDE of a string, which is why I used the + operator to add the string "\n" to it.
+// The .inclues() method determines if an array contains an element and will return either TRUE or FALSE.
+// EXAMPLE:
+// const numbersArray = [1, 2, 3, 4, 5]
+// const number = 3
+// if (numbersArray.includes(number)){
+  // consolde.log("The number is in the array.")
+// }
+
+// So I added an if statement to check if the guess is in the numbers array. Then I used the .includes(guess) method to check if the 
+// array contains the guess.
 
 
 function pickTwo(){
