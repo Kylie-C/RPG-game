@@ -247,10 +247,13 @@ function pick (guess){
     text.innerText += "Wrong! You lose 10 health!";
     health -= 10;
     healthText.innerText = health;
+    if (health <= 0) {
+      lose();
+    }
   }
 }
-// Fixed the syntax of the previous push in the IF statement.
-// Also added en else statement to read the following string. Updated the health and healthText also.
+//Since I subtracted 10 health from the player, I needed to check if the player's health is less than or equal to 0. If it is 0,
+// I called the lose() function.
 
 function pickTwo(){
   pick(2);
